@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "example-service-templete-core"
+version = "0.1.0"
+description = ""
+authors = ["Anustup <anustup@mediadistillery.com>"]
+license = "MediaDistillery"
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+example-service-templete-foundation = { path = "../example-service-templete-foundation", develop = true }
+
+[tool.poetry.dev-dependencies]
+pytest = ">=6.2.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
