@@ -7,7 +7,7 @@ import re
 import requests
 import yaml
 
-from example_service_templete_foundation.utils import PathLike, DefaultSpringCloudConfigParser
+from example_service_template_foundation.utils import PathLike, DefaultSpringCloudConfigParser
 
 logger = logging.getLogger(__name__)
 
@@ -46,7 +46,7 @@ def flatten_dict(data):
 
 
 def reindex_list(data):
-    pattern = '\[\d+\]' # looking for instances like hello[0], goodbye[1]
+    pattern = '\[\d+\]'  # looking for instances like hello[0], goodbye[1]
     incorrect_indexed_items = [k for k, v in data.items() if re.search(pattern, k)]
     for item in incorrect_indexed_items:
         correct_name = re.sub(pattern, '', item)
@@ -92,11 +92,7 @@ class ConfigurationManager:
         return self.data.get(item, default)
 
     def __repr__(self):
-        return '{}({!r}, {!r})'.format(
-            self.__class__.__name__,
-            self.data,
-            self.location
-        )
+        return '{}({!r}, {!r})'.format(self.__class__.__name__, self.data, self.location)
 
     def __str__(self):
         s = '{}('.format(self.__class__.__name__)
@@ -167,7 +163,9 @@ class ConfigurationManager:
             return cls(data, str(filepath), **kwargs)
 
     @classmethod
-    def from_remote(cls, url: str, *, parser: callable = DefaultSpringCloudConfigParser(), **kwargs) -> 'ConfigurationManager':
+    def from_remote(
+        cls, url: str, *, parser: callable = DefaultSpringCloudConfigParser(), **kwargs
+    ) -> 'ConfigurationManager':
         response = requests.get(url)
         if not response.ok:
             response.raise_for_status()
