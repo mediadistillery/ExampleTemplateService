@@ -2,9 +2,15 @@ import logging
 import os
 
 import prometheus_client as prometheus
-from example_service_templete_service.constants import DEFAULT_CONFIG_PATH, DEFAULT_PROMETHEUS_PORT
-from example_service_templete_foundation.configuration_manager import ConfigurationManager
-#from md_foundation.config.configuration_manager import ConfigurationManager
+from example_service_template_foundation.configuration_manager import (
+    ConfigurationManager,
+)
+
+from example_service_template_service.constants import (
+    DEFAULT_CONFIG_PATH,
+    DEFAULT_PROMETHEUS_ENABLED,
+    DEFAULT_PROMETHEUS_PORT,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -20,7 +26,7 @@ def initialize_configuration() -> ConfigurationManager:
 
 
 def initialize_prometheus(config: ConfigurationManager) -> None:
-    if config.get('prometheus.enabled', False):
+    if config.get('prometheus.enabled', DEFAULT_PROMETHEUS_ENABLED):
         prometheus_port = config.get('prometheus.port', DEFAULT_PROMETHEUS_PORT)
         logger.info(f'Starting prometheus client on port {prometheus_port}')
         prometheus.start_http_server(prometheus_port)

@@ -47,7 +47,5 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Custom
 .ipynb_checkpoints/
-
-# Helm Chart
-.chart/
