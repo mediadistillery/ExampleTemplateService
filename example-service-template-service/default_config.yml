@@ -5,4 +5,4 @@ exampleservicetemplateservice.port: 5000
 exampleservicetemplateservice.hostName: 127.0.0.1
 exampleservicetemplateservice.logFile: null
 exampleservicetemplateservice.logLevel: info
-fastapi.logLevel: null
+fastapi.logLevel: warning
