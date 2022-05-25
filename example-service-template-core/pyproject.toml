@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-example-service-template-foundation = { path = "../example-service-template-foundation", develop = true }
+md-example-service-template-foundation = "1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = ">=6.2.1"

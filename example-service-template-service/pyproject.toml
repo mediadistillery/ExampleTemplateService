@@ -12,9 +12,8 @@ pydantic="~1.7.3"
 uvicorn="~0.13.3"
 prometheus-client = ">=0.6.0"
 python-multipart = "^0.0.5"
-example-service-template-foundation = { path = "../example-service-template-foundation", develop = true }
-example-service-template-core = { path = "../example-service-template-core", develop = true }
-
+md-example-service-template-foundation = "1.0.0"
+example-service-template-core = "0.1.0"
 [tool.poetry.dev-dependencies]
 pytest = ">=6.2.1"
 toml = "^0.10.2"

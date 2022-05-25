@@ -2,7 +2,7 @@ import pathlib
 
 import toml
 
-from example_service_template_foundation.version import __version__
+from md_example_service_template_foundation.version import __version__
 
 
 def test_versions_are_in_sync():

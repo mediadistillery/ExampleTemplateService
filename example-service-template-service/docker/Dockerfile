@@ -1,3 +1,4 @@
+
 FROM python:3.8-slim AS builder
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
@@ -9,8 +10,7 @@ RUN useradd -u 1001 -m -s /bin/bash ${USERNAME}
 USER ${USERNAME}
 COPY requirements.txt /
 RUN pip install setuptools wheel --no-cache-dir \
- && pip install -r requirements.txt --user \
- && pip install . --user
+ && pip install -r requirements.txt --user
 
 FROM python:3.8-slim
 ARG USERNAME=example-service-template-service

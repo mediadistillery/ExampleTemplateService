@@ -2,7 +2,7 @@ import logging
 
 import fastapi
 import uvicorn
-from example_service_template_foundation.logger import set_logging
+from md_example_service_template_foundation.logger import set_logging
 
 from example_service_template_service.api_v1.example_service import (
     example_service_router as router_v1,

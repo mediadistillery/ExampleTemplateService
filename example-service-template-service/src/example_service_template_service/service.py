@@ -1,7 +1,7 @@
 import logging
 
 from example_service_template_core.utils import check_number_input
-from example_service_template_foundation.configuration_manager import (
+from md_example_service_template_foundation.configuration_manager import (
     ConfigurationManager,
     ConfigurationMixin,
 )

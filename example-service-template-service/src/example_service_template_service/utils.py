@@ -2,7 +2,7 @@ import logging
 import os
 
 import prometheus_client as prometheus
-from example_service_template_foundation.configuration_manager import (
+from md_example_service_template_foundation.configuration_manager import (
     ConfigurationManager,
 )
 

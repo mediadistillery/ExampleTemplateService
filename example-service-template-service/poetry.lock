@@ -22,11 +22,11 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "certifi"
-version = "2021.10.8"
+version = "2022.5.18.1"
 description = "Python package for providing Mozilla's CA Bundle."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 
 [[package]]
 name = "charset-normalizer"
@@ -61,32 +61,10 @@ version = "0.1.0"
 description = ""
 category = "main"
 optional = false
-python-versions = "^3.7"
-develop = true
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-example-service-template-foundation = {path = "../example-service-template-foundation", develop = true}
-
-[package.source]
-type = "directory"
-url = "../example-service-template-core"
-
-[[package]]
-name = "example-service-template-foundation"
-version = "0.1.0"
-description = ""
-category = "main"
-optional = false
-python-versions = "^3.7"
-develop = true
-
-[package.dependencies]
-PyYAML = ">=5.1b3"
-requests = "^2.21"
-
-[package.source]
-type = "directory"
-url = "../example-service-template-foundation"
+md-example-service-template-foundation = "1.0.0"
 
 [[package]]
 name = "fastapi"
@@ -129,6 +107,18 @@ description = "iniconfig: brain-dead simple config-ini parsing"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "md-example-service-template-foundation"
+version = "1.0.0"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[package.dependencies]
+PyYAML = ">=5.1b3"
+requests = ">=2.21,<3.0"
 
 [[package]]
 name = "packaging"
@@ -320,7 +310,7 @@ standard = ["websockets (>=8.0.0,<9.0.0)", "watchgod (>=0.6)", "python-dotenv (>
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "507b0b57c46696f5166f5bf7921387318e3d93c3c8f6626b420d4da94b2f9bc5"
+content-hash = "c62a30f11ba7f3e76b575128aab9e9f4839ff8dcbc39bf4653755e58c673534b"
 
 [metadata.files]
 atomicwrites = [
@@ -332,8 +322,8 @@ attrs = [
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 certifi = [
-    {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
-    {file = "certifi-2021.10.8.tar.gz", hash = "sha256:78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"},
+    {file = "certifi-2022.5.18.1-py3-none-any.whl", hash = "sha256:f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"},
+    {file = "certifi-2022.5.18.1.tar.gz", hash = "sha256:9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"},
 ]
 charset-normalizer = [
     {file = "charset-normalizer-2.0.12.tar.gz", hash = "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"},
@@ -347,8 +337,10 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
 ]
-example-service-template-core = []
-example-service-template-foundation = []
+example-service-template-core = [
+    {file = "example-service-template-core-0.1.0.tar.gz", hash = "sha256:4e57a5fc66e2b896d80a8470f9bd23f1c116e36042d1a3686186cd0a4cd540d5"},
+    {file = "example_service_template_core-0.1.0-py3-none-any.whl", hash = "sha256:d115697977a3299d430dd9eb474c0cb0b7bad665f1338ef32d79ca05daf5f556"},
+]
 fastapi = [
     {file = "fastapi-0.63.0-py3-none-any.whl", hash = "sha256:98d8ea9591d8512fdadf255d2a8fa56515cdd8624dca4af369da73727409508e"},
     {file = "fastapi-0.63.0.tar.gz", hash = "sha256:63c4592f5ef3edf30afa9a44fa7c6b7ccb20e0d3f68cd9eba07b44d552058dcb"},
@@ -364,6 +356,10 @@ idna = [
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
+]
+md-example-service-template-foundation = [
+    {file = "md-example-service-template-foundation-1.0.0.tar.gz", hash = "sha256:cc686a8be2b984508310eccd30fbb8388499e828eaef4935440d629fc3e08085"},
+    {file = "md_example_service_template_foundation-1.0.0-py3-none-any.whl", hash = "sha256:2c31bdfc60d4d483c0f51ad1ba75d790514d3060e4e57b213a78fee78c9c7da1"},
 ]
 packaging = [
     {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},

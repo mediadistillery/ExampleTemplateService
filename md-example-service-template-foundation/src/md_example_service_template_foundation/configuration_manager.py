@@ -7,7 +7,7 @@ import re
 import requests
 import yaml
 
-from example_service_template_foundation.utils import PathLike, DefaultSpringCloudConfigParser
+from md_example_service_template_foundation.utils import PathLike, DefaultSpringCloudConfigParser
 
 logger = logging.getLogger(__name__)
 

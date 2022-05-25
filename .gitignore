@@ -38,6 +38,8 @@ Thumbs.db
 *.app
 *.exe
 *.war
+**/dist/*.tar.gz
+**/dist/*.whl
 
 # Large media files
 *.mp4

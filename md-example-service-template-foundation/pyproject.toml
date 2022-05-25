@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "example-service-template-foundation"
-version = "0.1.0"
+name = "md-example-service-template-foundation"
+version = "1.0.0"
 description = ""
 authors = ["Anustup Das <anustup@mediadistillery.com>", "Ryan Amirkhan <ryan@mediadistillery.com>"]
 license = "MIT"
