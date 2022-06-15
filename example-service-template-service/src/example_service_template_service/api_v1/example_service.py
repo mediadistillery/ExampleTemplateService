@@ -40,3 +40,19 @@ async def addition(inputs: List[float]):
     logger.debug(f"Returning response {response}")
 
     return response
+
+
+@example_service_router.get('/example/version', tags=['version'])
+async def addition():
+
+    logger.info(f'Received addition request (service)')
+    metrics.called('/example/version')
+    try:
+        response = service.version()
+    except Exception:
+        metrics.call_failed('/example/version')
+        raise
+
+    logger.debug(f"Returning response {response}")
+
+    return response

@@ -1,8 +1,9 @@
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-3614/)
 
-# Media Distillery Example Service Templete
+#  Example Service Template
 
-This project contains the Media Distillery example templete service (see [Bitbucket](https://bitbucket.org/mediadistillery/md-dl-face-clustering)).
+This project contains the Example Service Templete (see [Github](https://github.com/mediadistillery/ExampleTemplateService.git)).
+This project mainly is an example FastApi implementation where there is just an Add function implemented and resturn an addition of a list of numbers. 
 
 ## Getting Started
 
@@ -53,6 +54,14 @@ Or use the alias:
 ```bash
 
 run-cli
+
+```
+
+Service can be accessed through:
+
+```bash
+
+example-service-template-service/script/request.py
 
 ```
 

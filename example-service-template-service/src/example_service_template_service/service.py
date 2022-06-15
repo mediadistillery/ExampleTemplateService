@@ -21,11 +21,15 @@ class DlExampleService(ConfigurationMixin):
     def add(self, data) -> float:
         sum = 0
         print(data)
-
-        print(f"We have {check_number_input(data)} numbers of add")
+        print(f"We have {check_number_input(data)} numbers to add")
         for i in data:
             sum += i
             print(sum)
 
         print(f"Version of the service: {__version__}")
         return sum
+
+    def version(self) -> float:
+        print(f"Version of the service: {__version__}")
+        v = __version__
+        return v
