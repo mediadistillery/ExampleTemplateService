@@ -3,7 +3,7 @@
 #  Example Service Template
 
 This project contains the Example Service Templete (see [Github](https://github.com/mediadistillery/ExampleTemplateService.git)).
-This project mainly is an example FastApi implementation where there is just an Add function implemented and resturn an addition of a list of numbers. 
+This project mainly is an example FastApi implementation where there is just an Add function implemented and returns an addition of a list of numbers. 
 
 ## Getting Started
 
@@ -79,6 +79,30 @@ pip install service-templete-test-service==some-random-text
 ```
 
 This will output all the available versions.
+
+### Build
+
+Indivitual packages can be build with
+
+```bash
+
+poetry build
+
+```
+and published to PYPI using
+```bash
+
+ twine upload -r packahe_name dist/*
+
+```
+
+Or with Poetry
+
+```bash
+
+poetry publish
+
+```
 
 ## Authors
 

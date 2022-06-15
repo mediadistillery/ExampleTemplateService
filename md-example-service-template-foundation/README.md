@@ -14,6 +14,30 @@ Alternatively, install the module from nexus:
 pip install md-foundation
 ```
 
+### Build
+
+Indivitual packages can be build with
+
+```bash
+
+poetry build
+
+```
+and published to PYPI using
+```bash
+
+ twine upload -r packahe_name dist/*
+
+```
+
+Or with Poetry
+
+```bash
+
+poetry publish
+
+```
+
 
 ### Release Notes 
 1.0.0: Change log one can maintain for each release.
