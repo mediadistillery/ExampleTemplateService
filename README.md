@@ -4,20 +4,29 @@
 <h3 align="center">A template for hosting your ML solutions quickly with fastAPI </h3>
 
 <p align="center">
-<a href="https://coveralls.io/github/psf/black?branch=main"><img alt="Coverage Status" src="https://coveralls.io/repos/github/psf/black/badge.svg?branch=main"></a>
-<a href="https://github.com/psf/black/blob/main/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
-<a href="https://pypi.org/project/our_project/"><img alt="PyPI" src="https://img.shields.io/pypi/v/black"></a>
-<a href=""><img alt="Downloads" src="https://pepy.tech/badge/black"></a>
-<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+	<a href="https://mediadistillery.com/">
+    	<img alt="Website Media Distillery" src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg"></a>
+	<a href="https://github.com/mediadistillery/ExampleTemplateService/blob/main/LICENSE.txt">
+    	<img alt="PyPI License: MIT" src="https://img.shields.io/pypi/l/ansicolortags.svg"></a>
+    <a href="https://github.com/psf/black">
+		<img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+	<a href="https://svgshare.com/i/Zhy.svg">
+        <img alt="Linux" src="https://svgshare.com/i/Zhy.svg"></a>
+	<a href="https://github.com/mediadistillery/ExampleTemplateService"><img alt="Ask Me Anything !" src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg"></a>
+    <a href="">
+        <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/example-template-service"></a>
+	<a href="">
+        <img alt="Awesome Badges" src="https://img.shields.io/badge/badges-awesome-green.svg"></a>
 </p>
+
 
 
 Do you have an amazing Machine Learning Solution but you are thinking how to create a webservice out of it? Well this project exactly solves your problem. 
 This repo can be used as a kickstarter to convert your local ML application into a running webservice that can be deployed to the server/local.
 
-This is an example project that can help you understand the framework and design of FastAPI that we generaly use in MD.
+This is an example project that can help you understand the framework and design of FastAPI that we generally use in MD.
 
-<h3>Additionaly one can also learn about other activities needed to deploy a solution to servers [Production] involving:</h3>
+<h3>Additionally one can also learn about other activities needed to deploy a solution to servers [Production] involving:</h3>
 
 - Dependency management and packaging in Python using Poetry.
   * How a simple <b><i> pyproject.toml</b></i> looks like for poetry, can be found under each package. 
@@ -27,35 +36,29 @@ This is an example project that can help you understand the framework and design
 
 ---
 
-**[Read the blog on ReadTheDocs for more details!](https://docs.google.com/document/d/1qMOIHVmRWmEGeNc1yt2mZWbot6edQr4TOQo7jOTlDwg/edit?usp=sharing)**
+**[Read the blog for more details!](https://mediadistillery.com/news?categories=article)**
 
 ---
 
 ## Project Structure
 
-### example-service-template-foundation:
-The foundation library may contain shared python code and functions that can be reused in sereval Python projects.
+### example-template-foundation:
+The foundation library may contain shared python code and functions that can be reused in several Python projects or services.
 
-### example-service-template-core:
-The core library may contain  python code that are core to a specific project which mainly deals with the actual business logic.
+### example-template-core:
+The core library may contain python code that is core to a specific project which mainly deals with the actual business logic, such as model initialization, inference and data pre- or post-processing.
 
-### example-service-template-service:
-The service package is the actual package that runs the service.
+### example-template-service:
+The purpose of the service package is to make the functionalities of the core accessible through a REST API.
 
+### Please read the README for each individual package.
 
-<h3>P.s:</h3>
-<h4>Please read the Read Me for indivitual package.</h4>
-You can replace <i>"example-service-template" </i> with your custom package names while renaming the packagesn and add custom packages as per requirment.
+You can replace <i>"example-template" </i> with your custom package names while renaming the packages and add custom packages as required.
 
 
 ## License
 
-MIT
-
-
-## Change log
-
-Change log can be added here.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
 ## Authors
 
