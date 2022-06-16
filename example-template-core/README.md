@@ -2,7 +2,7 @@
 
 #  Example Service Template Core
 
-The foundation library contains shared python code that can be reused in the Python projects.
+The core library may contain python code that is core to a specific project which mainly deals with the business logic, such as model initialization, inference and data pre- or post-processing.
 
 ## Getting Started
 
@@ -10,14 +10,14 @@ The foundation library contains shared python code that can be reused in the Pyt
 Run the following commands:
 ```
 sudo apt-get install libyaml-dev
-cd <install-directory>/example-template-foundation
+cd <install-directory>/example-template-core
 poetry update
 poetry build
 ```
 
-Alternatively, install the module from PYPI:
+Alternatively, install the module from nexus:
 ```
-pip install example-template-foundation
+pip install example-template-core
 ```
 
 ### Build
@@ -52,6 +52,12 @@ poetry publish
 
 MIT.
 
-
 ### Release Notes 
-1.0.0: Change log one can maintain for each release.
+* `0.1.0`
+    * First Version of the example templete core
+
+    
+
+
+
+

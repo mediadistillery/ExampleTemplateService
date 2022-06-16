@@ -21,12 +21,11 @@
 
 
 
-Do you have an amazing Machine Learning Solution but you are thinking how to create a webservice out of it? Well this project exactly solves your problem. 
-This repo can be used as a kickstarter to convert your local ML application into a running webservice that can be deployed to the server/local.
+Do you have an amazing Machine Learning Solution but you are thinking you do not know how to create a webservice out of it? Well, this project exactly solves your problem. This repo can be used as a kickstarter to convert your local ML application into a running webservice that can be deployed to the server/local.
 
-This is an example project that can help you understand the framework and design of FastAPI that we generally use in MD.
+This is an example project that can help you understand the framework and design of FastAPI that is generally used at Media Distillery.
 
-<h3>Additionally one can also learn about other activities needed to deploy a solution to servers [Production] involving:</h3>
+<h3>In addition, you can also learn about other activities needed to deploy a solution to servers [Production], including:</h3>
 
 - Dependency management and packaging in Python using Poetry.
   * How a simple <b><i> pyproject.toml</b></i> looks like for poetry, can be found under each package. 
@@ -46,7 +45,7 @@ This is an example project that can help you understand the framework and design
 The foundation library may contain shared python code and functions that can be reused in several Python projects or services.
 
 ### example-template-core:
-The core library may contain python code that is core to a specific project which mainly deals with the actual business logic, such as model initialization, inference and data pre- or post-processing.
+The core library may contain python code that is core to a specific project which mainly deals with the business logic, such as model initialization, inference and data pre- or post-processing.
 
 ### example-template-service:
 The purpose of the service package is to make the functionalities of the core accessible through a REST API.

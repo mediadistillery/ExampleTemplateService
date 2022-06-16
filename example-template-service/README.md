@@ -82,7 +82,7 @@ This will output all the available versions.
 
 ### Build
 
-Indivitual packages can be build with
+Individual packages can be build with
 
 ```bash
 
