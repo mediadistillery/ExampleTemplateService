@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "example-template-service"
+version = "0.1.0"
+description = ""
+authors = ["Anustup Das <anustup@mediadistillery.com>", "Ryan Amirkhan ryan@mediadistillery.com"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi="~0.63.0"
+pydantic="~1.7.3"
+uvicorn="~0.13.3"
+prometheus-client = ">=0.6.0"
+python-multipart = "^0.0.5"
+example-template-foundation = "1.0.0"
+example-template-core = "0.1.0"
+[tool.poetry.dev-dependencies]
+pytest = ">=6.2.1"
+toml = "^0.10.2"
+
+[tool.poetry.scripts]
+example_template_service_web_start = 'example_template_service.run:run_cli'
+run-cli = "example_template_service.run:run_cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"

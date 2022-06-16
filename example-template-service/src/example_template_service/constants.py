@@ -1,0 +1,11 @@
+DEFAULT_CONFIG_PATH = '/etc/example-template-service/config.yml'
+DEFAULT_SERVICE_PORT = 5000
+DEFAULT_PROMETHEUS_PORT = 8080
+DEFAULT_PROMETHEUS_ENABLED = True
+DEFAULT_SILENCE_KLEIN_LOGS = True
+DEFAULT_MAX_WORKERS = 4
+DEFAULT_LOG_LEVEL = 'info'
+LOCALHOST = '127.0.0.1'
+PROJECT_NAME = 'example-template-service'
+PROJECT_DESCRIPTION = 'Example service of the Media Distillery Service Template'
+API_VERSION_PREFIX = '/api/1'

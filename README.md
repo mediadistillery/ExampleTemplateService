@@ -32,7 +32,7 @@ This is an example project that can help you understand the framework and design
   * How a simple <b><i> pyproject.toml</b></i> looks like for poetry, can be found under each package. 
 - Creating the deployable containers of the ML services using Docker.
   * Example <b><i> Dockerfile</b></i> can be found at:
-    > example-service-template-service/docker/Dockerfile
+    > example-template-service/docker/Dockerfile
 
 ---
 

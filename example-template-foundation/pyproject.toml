@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "example-template-foundation"
+version = "1.0.0"
+description = ""
+authors = ["Anustup Das <anustup@mediadistillery.com>", "Ryan Amirkhan <ryan@mediadistillery.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python="^3.7"
+PyYAML=">=5.1b3"
+requests="^2.21"
+
+[tool.poetry.dev-dependencies]
+pytest = ">=6.2.2"
+toml = "^0.10.2"
+
+[tool.isort]
+profile = "black"
