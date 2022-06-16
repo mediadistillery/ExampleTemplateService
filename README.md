@@ -13,7 +13,8 @@
 	<a href="https://svgshare.com/i/Zhy.svg">
         <img alt="Linux" src="https://svgshare.com/i/Zhy.svg"></a>
 	<a href="https://github.com/mediadistillery/ExampleTemplateService"><img alt="Ask Me Anything !" src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg"></a>
-    <a href="">
+   
+<a href="">
         <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/example-template-service"></a>
 	<a href="">
         <img alt="Awesome Badges" src="https://img.shields.io/badge/badges-awesome-green.svg"></a>
