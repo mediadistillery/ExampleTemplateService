@@ -1,4 +1,4 @@
-![MD Logo](MD_logo.png)
+![MD Logo](Tools.png)
 
 <h1 align="center">From zero to production in less than a day</h1>
 <h3 align="center">A template for hosting your ML solutions quickly with fastAPI </h3>
