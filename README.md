@@ -36,7 +36,7 @@ This is an example project that can help you understand the framework and design
 
 ---
 
-**[Read the blog for more details!]([https://mediadistillery.com/news?categories=article](https://bit.ly/From_zero_to_Production_in_less_than_a_day))**
+**[Read the blog for more details!](https://bit.ly/From_zero_to_Production_in_less_than_a_day)**
 
 ---
 
