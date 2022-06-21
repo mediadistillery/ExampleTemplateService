@@ -11,7 +11,7 @@ from example_template_service.constants import (
     API_VERSION_PREFIX,
     DEFAULT_LOG_LEVEL,
     DEFAULT_SERVICE_PORT,
-    LOCALHOST,
+    DEFAULT_HOST,
     PROJECT_DESCRIPTION,
     PROJECT_NAME,
 )
@@ -48,11 +48,11 @@ async def version() -> dict:
 
 def run_app(port: int = None, log_level: str = None) -> None:
     config = initialize_configuration()
-    port = port or config.get('exampleservicetemplateservice.port', DEFAULT_SERVICE_PORT)
-    host = config.get('exampleservicetemplateservice.hostName', LOCALHOST)
-    log_file = config.get('exampleservicetemplateservice.logFile')
+    port = port or config.get('exampletemplateservice.port', DEFAULT_SERVICE_PORT)
+    host = config.get('exampletemplateservice.hostName', DEFAULT_HOST)
+    log_file = config.get('exampletemplateservice.logFile')
     fastapi_log_level = config.get('fastapi.logLevel')
-    log_level = log_level or config.get('exampleservicetemplateservice.logLevel', DEFAULT_LOG_LEVEL)
+    log_level = log_level or config.get('exampletemplateservice.logLevel', DEFAULT_LOG_LEVEL)
 
     set_logging(filepath=log_file, level=log_level, multithreaded=True)
     logging.getLogger('multipart.multipart').setLevel(logging.WARNING)

@@ -1,10 +1,9 @@
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-3614/)
  <a href="">
         <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/example-template-service"></a>
 
 #  Example Template Service
 
-This project contains the Example Service Templete (see [Github](https://github.com/mediadistillery/ExampleTemplateService.git)).
+This project contains the Example Service Template (see [Github](https://github.com/mediadistillery/ExampleTemplateService.git)).
 This project mainly is an example FastApi implementation where there is just an Add function implemented and returns an addition of a list of numbers. 
 
 ## Getting Started
@@ -15,9 +14,9 @@ Follow these steps to set up the configuration file:
 
 ```shell
 
-mkdir -p /etc/service-templete-test-service/
+mkdir -p /etc/example-template-service/
 
-cp default_config.yml /etc/service-templete-test-service/
+cp default_config.yml /etc/example-template-service/config.yml
 
 ```
 
@@ -29,7 +28,7 @@ The actual service can be installed from PyPI (see [PyPI](https://pypi.org/)).
 
 ```shell
 
-pip install service-templete-test-service
+pip install example-template-service
 
 ```
 
@@ -37,8 +36,21 @@ Or with poetry:
 
 ```shell
 
-poetry add service-templete-test-service
+poetry add example-template-service
 
+```
+
+> You need to have Poetry installed. It can be installed with pip. See the Poetry [docs](https://python-poetry.org/docs/) for more installations options.
+
+The library can be installed for development like this with Poetry:
+```shell
+poetry install
+```
+
+Or using the requirements.txt:
+```shell
+pip install -r requirements.txt
+pip install -e .
 ```
 
 ### Usage
@@ -47,7 +59,7 @@ To start the service run:
 
 ```bash
 
-example_service_templete_web_start
+example_template_service_web_start
 
 ```
 
@@ -76,7 +88,7 @@ Swagger/OpenAPI documentation is available at http://localhost:5000/docs.
 
 ```bash
 
-pip install service-templete-test-service==some-random-text
+pip install example-template-service==some-random-text
 
 ```
 
@@ -94,7 +106,7 @@ poetry build
 and published to PYPI using
 ```bash
 
- twine upload -r packahe_name dist/*
+ twine upload -r package_name dist/*
 
 ```
 
@@ -105,6 +117,15 @@ Or with Poetry
 poetry publish
 
 ```
+
+### Docker
+To build a docker image for the service, run this command from the current directory:
+
+> docker build --build-arg VERSION=$(poetry version --short) --tag example-template-service:$(poetry version --short) --file docker/Dockerfile .
+
+To run that docker image, run this command:
+
+> docker run -p 5000:5000 -p 8080:8080 example-template-service 
 
 ## Authors
 
@@ -119,7 +140,7 @@ MIT.
 ## Changelog
 
 * `0.1.0`
-    * First Version of the example templete service
+    * First Version of the example template service
 
     
 

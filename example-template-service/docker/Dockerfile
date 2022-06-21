@@ -11,7 +11,7 @@ USER ${USERNAME}
 COPY requirements.txt /
 RUN pip install setuptools wheel --no-cache-dir \
  && pip install -r requirements.txt --user \
- && pip install example-template-service --user
+ && pip install example-template-service==${VERSION} --user
 
 FROM python:3.8-slim
 ARG USERNAME=example-template-service

@@ -53,7 +53,7 @@ The purpose of the service package is to make the functionalities of the core ac
 
 ### Please read the README for each individual package.
 
-You can replace <i>"example-template" </i> with your custom package names while renaming the packages and add custom packages as required.
+You can replace <i>"example-template" </i> with your custom package names while renaming the packages and add custom packages as required. You may need to update other things as well depending on your intended use.
 
 
 ## License
