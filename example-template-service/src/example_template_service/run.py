@@ -4,6 +4,7 @@ import logging
 
 import example_template_service as service
 
+
 logger = logging.getLogger(__name__)
 
 

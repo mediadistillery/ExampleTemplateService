@@ -1,7 +1,7 @@
 import logging
 
 from example_template_core.utils import check_number_input
-from example_template_foundation.configuration_manager import (
+from example_template_foundation.config.configuration_manager import (
     ConfigurationManager,
     ConfigurationMixin,
 )

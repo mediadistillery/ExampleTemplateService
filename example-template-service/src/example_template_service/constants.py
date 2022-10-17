@@ -1,4 +1,4 @@
-DEFAULT_CONFIG_PATH = '/etc/example-template-service/config.yml'
+DEFAULT_CONFIG_PATH = '/home/anustup/Desktop/Mediadistillery/Service_Templete/service-templete-test/example-template-service/default_config.yml'
 DEFAULT_SERVICE_PORT = 5000
 DEFAULT_PROMETHEUS_PORT = 8080
 DEFAULT_PROMETHEUS_ENABLED = True

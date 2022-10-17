@@ -6,3 +6,19 @@ exampletemplateservice.hostName: 0.0.0.0
 exampletemplateservice.logFile: null
 exampletemplateservice.logLevel: info
 fastapi.logLevel: warning
+
+
+storage.serviceName: example_templete/
+models.enabledTypes:
+        - yolo
+
+yolo.modelName: yolov4.weights
+
+yolo.weightPath: '/etc/example_templete/models/yolo/yolov4.weights'
+yolo.output: '/etc/example_templete/models/yolo_checkpoint'
+yolo.tiny: False
+yolo.input_size: 416
+yolo.score_thres: 0.2
+yolo.framework: tf
+yolo.model: yolov4
+

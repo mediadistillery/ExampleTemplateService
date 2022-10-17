@@ -3,6 +3,8 @@ import logging
 import fastapi
 import uvicorn
 from example_template_foundation.logger import set_logging
+from example_template_foundation.storage.models_provider import ModelsProvider
+from example_template_core.save_model import Model_Converter
 
 from example_template_service.api_v1.example_service import (
     example_service_router as router_v1,
@@ -48,6 +50,10 @@ async def version() -> dict:
 
 def run_app(port: int = None, log_level: str = None) -> None:
     config = initialize_configuration()
+
+    models_provider = ModelsProvider(config)
+    models_provider.download_models()
+
     port = port or config.get('exampletemplateservice.port', DEFAULT_SERVICE_PORT)
     host = config.get('exampletemplateservice.hostName', DEFAULT_HOST)
     log_file = config.get('exampletemplateservice.logFile')
