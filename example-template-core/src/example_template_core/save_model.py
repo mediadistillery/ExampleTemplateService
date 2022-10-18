@@ -1,19 +1,8 @@
 import tensorflow as tf
-from absl import app, flags, logging
-from absl.flags import FLAGS
+from absl import app
 from example_template_core.yolo.yolov4 import YOLO, decode, filter_boxes
 import example_template_core.yolo.utils as utils
-from example_template_core.yolo.config import cfg
 from example_template_foundation.config.configuration_manager import ConfigurationManager
-
-flags.DEFINE_string('weights', '/home/anustup/Desktop/Mediadistillery/YOLO4/yolov4-custom-functions/weights/yolov4.weights', 'path to weights file')
-flags.DEFINE_string('output', '/home/anustup/Desktop/Mediadistillery/checkpoints/yolov4-416', 'path to output')
-flags.DEFINE_boolean('tiny', False, 'is yolo-tiny or not')
-flags.DEFINE_integer('input_size', 416, 'define input size of export model')
-flags.DEFINE_float('score_thres', 0.2, 'define score threshold')
-flags.DEFINE_string('framework', 'tf', 'define what framework do you want to convert (tf, trt, tflite)')
-flags.DEFINE_string('model', 'yolov4', 'yolov3 or yolov4')
-
 
 class Model_Converter:
   def __init__(self, config: ConfigurationManager):

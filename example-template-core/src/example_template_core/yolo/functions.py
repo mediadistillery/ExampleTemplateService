@@ -4,8 +4,8 @@ import random
 import numpy as np
 import tensorflow as tf
 import pytesseract
-from core.utils import read_class_names
-from core.config import cfg
+from example_template_core.yolo.utils import read_class_names
+from example_template_core.yolo.config import cfg
 
 # function to count objects, can return total classes or count per class
 def count_objects(data, by_class = False, allowed_classes = list(read_class_names(cfg.YOLO.CLASSES).values())):
@@ -31,11 +31,13 @@ def count_objects(data, by_class = False, allowed_classes = list(read_class_name
     # else count total objects found
     else:
         counts['total object'] = num_objects
-    
+
     return counts
 
 # function for cropping each detection and saving as new image
-def crop_objects(img, data, path, allowed_classes):
+def get_objects(data, allowed_classes):
+    cropped_images = []
+    objects = {}
     boxes, scores, classes, num_objects = data
     class_names = read_class_names(cfg.YOLO.CLASSES)
     #create dictionary to hold count of objects for image name
@@ -46,19 +48,13 @@ def crop_objects(img, data, path, allowed_classes):
         class_name = class_names[class_index]
         if class_name in allowed_classes:
             counts[class_name] = counts.get(class_name, 0) + 1
-            # get box coords
-            xmin, ymin, xmax, ymax = boxes[i]
-            # crop detection from image (take an additional 5 pixels around all edges)
-            cropped_img = img[int(ymin)-5:int(ymax)+5, int(xmin)-5:int(xmax)+5]
-            # construct image name and join it to path for saving crop properly
-            img_name = class_name + '_' + str(counts[class_name]) + '.png'
-            img_path = os.path.join(path, img_name )
-            # save image
-            cv2.imwrite(img_path, cropped_img)
+            object_details = {'bbox': list(map(int, list(boxes[i]))), 'confidence': str(scores[i])}
+            objects[class_name+"_"+str(counts.get(class_name, 0))] = object_details
         else:
             continue
-        
-# function to run general Tesseract OCR on any detections 
+    return objects
+
+# function to run general Tesseract OCR on any detections
 def ocr(img, data):
     boxes, scores, classes, num_objects = data
     class_names = read_class_names(cfg.YOLO.CLASSES)
@@ -82,5 +78,5 @@ def ocr(img, data):
         try:
             text = pytesseract.image_to_string(blur, config='--psm 11 --oem 3')
             print("Class: {}, Text Extracted: {}".format(class_name, text))
-        except: 
+        except:
             text = None
